@@ -1,8 +1,12 @@
-FROM centurylink/ruby-base:2.1.2
+FROM ubuntu
 
-MAINTAINER CenturyLink Labs <clt-labs-futuretech@centurylink.com>
+MAINTAINER ian.miell@gmail.com
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y graphviz
+RUN apt-get update
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y graphviz 
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y ruby-dev
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y gem
 RUN gem install docker-api sinatra
 
 ADD . /usr/src/app/
