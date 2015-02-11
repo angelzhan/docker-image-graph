@@ -4,9 +4,7 @@ MAINTAINER ian.miell@gmail.com
 
 RUN apt-get update
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y graphviz 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y ruby-dev
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y gem
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y graphviz ruby-dev gem build-essential
 RUN gem install docker-api sinatra
 
 ADD . /usr/src/app/
