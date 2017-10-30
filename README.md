@@ -57,3 +57,4 @@ Additionally, my primary Docker environment is CoreOS which does not have
 Graphviz installed and provides no way for me to install it myself -- in
 an environment like this, the only option is to run Graphviz inside a
 container.
+
